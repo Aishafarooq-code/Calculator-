@@ -70,13 +70,3 @@ button:hover {
     background-color: #3e628f;
 }
 
-@media (max-width: 420px) {
-    .calculator {
-        width: 280px;
-        padding: 16px;
-    }
-
-    button {
-        height: 52px;
-    }
-}
