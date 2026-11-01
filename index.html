@@ -4,46 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #e8effa;
+            color: #26354d;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            width: 340px;
+            background-color: #26354d;
+            padding: 22px;
+            border: 2px solid #172438;
+            border-radius: 20px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .display {
+            width: 100%;
+            height: 65px;
+            box-sizing: border-box;
+            background-color: #f7f8fc;
+            color: #26354d;
+            border: 2px solid #cbd5e4;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 15px;
+            font-size: 30px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 65px;
+            border: 1px solid #aabbd2;
+            border-radius: 10px;
+            background-color: #dce6f3;
+            color: #26354d;
+            font-size: 23px;
+        }
+
+        .special {
+            background-color: #bfd0e6;
+        }
+
+        .operator {
+            background-color: #91afd2;
+        }
+
+        .equal {
+            grid-column: span 3;
+            background-color: #527eae;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <main class="calculator">
-        <div class="calculator-header">
-            <span class="brand">CALCULATOR</span>
-            <span class="status-dots"><i></i><i></i><i></i></span>
-        </div>
 
-        <div class="display">
-            <div class="display-expression">WELCOME</div>
-            <div class="display-value">0</div>
-        </div>
+    <div class="calculator">
+        <div class="display">0</div>
 
         <div class="buttons">
-            <button class="function">AC</button>
-            <button class="function">C</button>
-            <button class="function">%</button>
-            <button class="operator">÷</button>
+            <button class="special">AC</button>
+            <button class="special">C</button>
+            <button class="special">.</button>
+            <button class="operator">*</button>
 
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="operator">×</button>
+            <button class="operator">/</button>
 
             <button>4</button>
             <button>5</button>
             <button>6</button>
-            <button class="operator">−</button>
+            <button class="operator">-</button>
 
             <button>1</button>
             <button>2</button>
             <button>3</button>
             <button class="operator">+</button>
 
-            <button class="zero">0</button>
-            <button>.</button>
-            <button class="equals">=</button>
+            <button>0</button>
+            <button class="equal">=</button>
         </div>
-        <div class="calculator-footer">SIMPLE • CLEAN • CLASSIC</div>
-    </main>
+    </div>
+
 </body>
 </html>
